@@ -15,18 +15,21 @@ Gram-negative bacterial effectors play important roles in host-pathogen interact
 
 
 <table style="width: 100%; border-collapse: collapse;">
+  <caption style="font-weight: bold; font-size: 1.2em; margin-bottom: 10px;">
+    Structure Weight Visualization Example
+  </caption>
   <tr style="border: none;">
     <td align="center" style="border: none; width: 33%;">
       <img src="https://github.com/user-attachments/assets/e06df2df-7525-4e47-a31e-0fabeb3f2917" width="100%" />
-      <p>Slrp (T3SE) Structure Weight Visualization</p>
+      <p>Slrp (T3SE)</p>
     </td>
     <td align="center" style="border: none; width: 33%;">
       <img src="https://github.com/user-attachments/assets/d0bb18ef-0b38-4d09-b45b-06eb1c7e3995" width="100%" />
-      <p>Tse5 (T6SE) Structure Weight Visualization</p>
+      <p>Tse5 (T6SE)</p>
     </td>
     <td align="center" style="border: none; width: 33%;">
       <img src="https://github.com/user-attachments/assets/12937f8e-deab-4ef6-a9d1-ac9c4e0acb41" width="100%" />
-      <p>SidJ (T4SE) Structure Weight Visualization</p>
+      <p>SidJ (T4SE)</p>
     </td>
   </tr>
 </table>
