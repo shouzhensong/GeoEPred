@@ -74,7 +74,7 @@ Pre-computed residue-level embeddings from ESM-2 (36-layer, 3B parameter model),
 
 
 
-
+## Weight visualization
 <table style="width: 100%; border-collapse: collapse;">
   <caption style="font-weight: bold; font-size: 1.2em; margin-bottom: 10px;">
     Structure Weight Visualization Example
