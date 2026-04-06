@@ -16,7 +16,7 @@ If you want to know the mapping of structure weights in a 3D structure, follow t
 
 <table style="width: 100%; border-collapse: collapse;">
   <caption style="font-weight: bold; font-size: 1.2em; margin-bottom: 10px;">
-    Structure Weight Visualization Example
+    Structure Weight Visualization Example:
   </caption>
   <tr style="border: none;">
     <td align="center" style="border: none; width: 33%;">
@@ -40,11 +40,51 @@ If you want to plot the sequence attention, you should install package `logomark
 1. **Predict**: Use `predict.py` to generate the attention-mapped file `attention.npy`.
 2. **Install logomaker**:you should install package `logomarker`.* Command: `pip install logomaker`
 3. **Visualize**: Use the `.npy` file in `plot_attention.ipynb` to see the attention distribution.The following image was generated.
-<img width="1258" height="446" alt="GitHub注意力分数可视化" src="https://github.com/user-attachments/assets/5793981e-62da-43a7-b6a9-9fda3dc029c1" />
+<figure>
+  <figcaption align="center"><b>Sequence attention Visualization Example:</figcaption>
+  <img width="1258" height="446" alt="Sequence attention" src="https://github.com/user-attachments/assets/5793981e-62da-43a7-b6a9-9fda3dc029c1" />
+</figure>
 
 
+##### Usage
 
+# Train model
+You can train the GeoMEL model by running `train.py` for cross-validation. 
+```shell
+python train.py \
+    --train_fasta ./data/fasta/Cleaned_Dataset_Train.fasta \
+    --test_fasta  ./data/fasta/Test-260.fasta \
+    --train_pdb_dirs ./train_pdb_output/pdb_high_confidence \
+                     ./train_pdb_output/pdb_low_confidence \
+    --test_pdb_dirs  ./test_pdb_output/pdb_high_confidence \
+                     ./test_pdb_output/pdb_low_confidence \
+    --output_dir ./data/processed \
+    --results_dir ./results \
+    --num_epochs 80 \
+    --batch_size 16 \
+    --n_folds 5 \
+    --gpu_id 0
+```
+```
+Parameters:
+  --train_fasta         Path to training FASTA file
+  --test_fasta          Path to test FASTA file
+  --train_pdb_dirs      Directories with training PDB files (multiple allowed)
+  --test_pdb_dirs       Directories with test PDB files (multiple allowed)
+  --output_dir          Cache directory for processed data (default: ./data/processed)
+  --train_esm_file      Path to training ESM pickle (auto-resolved if omitted)
+  --test_esm_file       Path to test ESM pickle (auto-resolved if omitted)
+```
 
+# Prediction
+You can predict your interested type of secreted proteins only or predict secretion systems and corresponding substrate proteins from scratch.
+#### Predict secretion protein
+```shell
+python predict.py --fasta_path examples/Test.fasta \
+		--model_location [path to model weights] \
+		--secretion_systems [I II III IV VI] \
+		--out_dir examples [--save_attn --no_cuda]
+```
 
 
 
