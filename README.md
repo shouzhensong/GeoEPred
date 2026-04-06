@@ -53,6 +53,22 @@ If you want to plot the sequence attention, you should install package `logomark
 
 
 # Usage
+First, you need to generate the model's input representations for the training/prediction data. Use `generate_train.py` to generate:
+1. ESM2 embedding vector file (pickle file)
+2. Graph data read from the structured channels (pt file)
+3. Samples'Label file(pickle file).The specific command is:
+```shell
+python generate_train_data.py \
+  --train_fasta ./data/fasta/Cleaned_Train.fasta \
+  --train_pdb_dirs ./train_pdb_output/pdb_high_confidence ./train_pdb_output/pdb_low_confidence \
+  --output_dir ./data/processed \
+  --esm_model esm2_t36_3B_UR50D \
+  --esm_dim 2560 \
+  --gpu_id 0 \
+  --esm_batch_tokens 2048 \
+  --steps all
+```
+   
 ## **Train model*
 You can train the GeoMEL model by running `train.py` for cross-validation. 
 ```shell
