@@ -1,5 +1,5 @@
 # ================================================================
-# CLEF-GVP Grad-CAM Structure Visualization Script (PyMOL)
+# GeoMEL Grad-CAM Structure Visualization Script (PyMOL)
 # ================================================================
 # Usage: In PyMOL command line, type   @protein_pymol.pml
 #        Or: File -> Run Script -> select this .pml file
