@@ -81,7 +81,7 @@ python train.py \
                      ./test_pdb_output/pdb_low_confidence \
     --output_dir ./data/processed \
     --results_dir ./results \
-    --num_epochs 80 \
+    --num_epochs 50 \
     --batch_size 16 \
     --n_folds 5 \
     --gpu_id 0
