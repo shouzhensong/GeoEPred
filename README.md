@@ -126,7 +126,7 @@ python predict_genome.py \
 
 ## Contact
 
-Please contact Hua Shi at [shihua@xmut.edu.cn](mailto:shihua@xmut.edu.cn) for questions.
+Please contact Shouzhen Song at [ssz814145@163.com](mailto:shihua@xmut.edu.cn) for questions.
 
 
 
